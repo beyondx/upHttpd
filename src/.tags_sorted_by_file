@@ -1,0 +1,103 @@
+!_TAG_FILE_SORTED	1	/0=unsorted, 1=sorted, 2=foldcase/
+!_TAG_FILE_FORMAT	2	/extended format; --format=1 will not append ;" to lines/
+!_TAG_PROGRAM_VERSION	5.8	//
+!_TAG_PROGRAM_AUTHOR	Darren Hiebert	/dhiebert@users.sourceforge.net/
+!_TAG_PROGRAM_NAME	Exuberant Ctags	//
+DEPS	Makefile	/^DEPS  := .deps$/;"	m
+SRCS	Makefile	/^SRCS := uphttpd.c up_conf.c up_log.c$/;"	m
+TGT	Makefile	/^TGT := uphttpd$/;"	m
+!_TAG_PROGRAM_URL	http://ctags.sourceforge.net	/official site/
+__list_add	list.h	/^static inline void __list_add(struct list_head *pnode, $/;"	f
+container_of	list.h	/^#define  container_of(/;"	d
+list_add	list.h	/^static inline void list_add(struct list_head *phead, $/;"	f
+list_add_tail	list.h	/^static inline void list_add_tail(struct list_head *phead, $/;"	f
+list_del	list.h	/^static inline void list_del(struct list_head *pnode)$/;"	f
+list_del_init	list.h	/^static inline void list_del_init(struct list_head *pnode)$/;"	f
+list_entry	list.h	/^#define  list_entry(/;"	d
+list_for_each	list.h	/^#define   list_for_each(/;"	d
+list_for_each_continue	list.h	/^#define   list_for_each_continue(/;"	d
+list_for_each_from	list.h	/^#define   list_for_each_from(/;"	d
+list_for_each_safe	list.h	/^#define   list_for_each_safe(/;"	d
+list_head	list.h	/^struct list_head {$/;"	s
+list_head_init	list.h	/^static inline void list_head_init(struct list_head *phead)$/;"	f
+next	list.h	/^	struct list_head *next;$/;"	m	struct:list_head	typeref:struct:list_head::list_head
+offset_of	list.h	/^#define  offset_of(/;"	d
+prev	list.h	/^	struct list_head *prev;$/;"	m	struct:list_head	typeref:struct:list_head::list_head
+BACKLOG	server.h	/^#define BACKLOG	/;"	d
+BUF_SIZE	server.h	/^#define BUF_SIZE	/;"	d
+DBG_PRINTF	server.h	/^#define  DBG_PRINTF(/;"	d
+DEF_CONF_FILE	server.h	/^#define  DEF_CONF_FILE	/;"	d
+DEF_DOC_ROOT	server.h	/^#define  DEF_DOC_ROOT	/;"	d
+DEF_LOG_FILE	server.h	/^#define  DEF_LOG_FILE	/;"	d
+DEF_PORT	server.h	/^#define  DEF_PORT	/;"	d
+ERR_PRINTF	server.h	/^#define  ERR_PRINTF(/;"	d
+IO_BUF_SIZE	server.h	/^#define  IO_BUF_SIZE /;"	d
+LENGTH_OF	server.h	/^#define LENGTH_OF(/;"	d
+MAX	server.h	/^#define  MAX(/;"	d
+PATH_SIZE	server.h	/^#define  PATH_SIZE	/;"	d
+PRG_NAME	server.h	/^#define PRG_NAME	/;"	d
+STD_HEADER	server.h	/^#define STD_HEADER /;"	d
+S_DETACH	server.h	/^enum { S_INIT, S_IDEL, S_RUNNING, S_DETACH } ; \/\/worker的状态 $/;"	e	enum:__anon1
+S_IDEL	server.h	/^enum { S_INIT, S_IDEL, S_RUNNING, S_DETACH } ; \/\/worker的状态 $/;"	e	enum:__anon1
+S_INIT	server.h	/^enum { S_INIT, S_IDEL, S_RUNNING, S_DETACH } ; \/\/worker的状态 $/;"	e	enum:__anon1
+S_RUNNING	server.h	/^enum { S_INIT, S_IDEL, S_RUNNING, S_DETACH } ; \/\/worker的状态 $/;"	e	enum:__anon1
+VERSION	server.h	/^#define VERSION	/;"	d
+XPRINTF	server.h	/^#define   XPRINTF(/;"	d
+buf	server.h	/^	char buf[IO_BUF_SIZE];$/;"	m	struct:iobuffer_t
+cond	server.h	/^	pthread_cond_t  cond;$/;"	m	struct:master_info
+conf_file	server.h	/^	char conf_file[PATH_SIZE]; \/\/配置文件路径$/;"	m	struct:up_cfg_info
+conn_fd	server.h	/^	int  conn_fd;$/;"	m	struct:worker_info
+doc_root_path	server.h	/^	char doc_root_path[PATH_SIZE]; \/\/文档根路径$/;"	m	struct:up_cfg_info
+dot_extension	server.h	/^  const char *dot_extension;$/;"	m	struct:__anon2
+iobuffer_t	server.h	/^struct iobuffer_t {$/;"	s
+len	server.h	/^	int len;$/;"	m	struct:iobuffer_t
+list	server.h	/^	struct list_head list;$/;"	m	struct:master_info	typeref:struct:master_info::list_head
+list	server.h	/^	struct list_head list;$/;"	m	struct:worker_info	typeref:struct:worker_info::list_head
+listen_port	server.h	/^	int listen_port; \/\/监听的端口$/;"	m	struct:up_cfg_info
+log_file	server.h	/^	char log_file[PATH_SIZE]; \/\/日志文件路径$/;"	m	struct:up_cfg_info
+master_info	server.h	/^struct master_info {$/;"	s
+mimetype	server.h	/^  const char *mimetype;$/;"	m	struct:__anon2
+mimetypes	server.h	/^} mimetypes[] = {$/;"	v	typeref:struct:__anon2
+mutex	server.h	/^	pthread_mutex_t mutex;$/;"	m	struct:master_info
+p	server.h	/^	pid_t p;$/;"	m	struct:server_info
+pcfg	server.h	/^	struct up_cfg_info *pcfg;$/;"	m	struct:server_info	typeref:struct:server_info::up_cfg_info
+pmaster	server.h	/^	struct master_info *pmaster;$/;"	m	struct:server_info	typeref:struct:server_info::master_info
+pworker	server.h	/^	struct worker_info *pworker;$/;"	m	struct:server_info	typeref:struct:server_info::worker_info
+run_as_daemon	server.h	/^	int run_as_daemon; \/\/是否以守护进程的方式运行$/;"	m	struct:up_cfg_info
+server_info	server.h	/^struct server_info {$/;"	s
+sock_fd	server.h	/^	int sock_fd;$/;"	m	struct:master_info
+status	server.h	/^	int status;$/;"	m	struct:worker_info
+tid	server.h	/^	pthread_t tid;$/;"	m	struct:worker_info
+up_cfg_info	server.h	/^struct up_cfg_info {$/;"	s
+verbose	server.h	/^	int verbose; \/\/显式具体执行流程方便调试$/;"	m	struct:up_cfg_info
+worker_info	server.h	/^struct worker_info {$/;"	s
+worker_nums	server.h	/^	size_t worker_nums;  \/\/线程数量$/;"	m	struct:master_info
+cmd_parse	up_conf.c	/^int cmd_parse(int argc, char *argv[])$/;"	f
+file_parse	up_conf.c	/^static int file_parse(const char *cfg_file)$/;"	f	file:
+print_conf_info	up_conf.c	/^static void print_conf_info(void)$/;"	f	file:
+up_conf_init	up_conf.c	/^int  up_conf_init(int argc, char *argv[])$/;"	f
+usage	up_conf.c	/^void usage(const char *prg_name)$/;"	f
+log_destroy	up_log.c	/^int log_destroy()$/;"	f
+log_init	up_log.c	/^int log_init(const char *logfile)$/;"	f
+log_pf	up_log.c	/^FILE *log_pf = NULL;$/;"	v
+mylog	up_log.c	/^void mylog(const char* format, ... )$/;"	f
+LOG_BUFFER_SIZE	up_log.h	/^#define LOG_BUFFER_SIZE /;"	d
+cli_fd	uphttpd.c	/^int cli_fd[BACKLOG] = {0};$/;"	v
+client_handler	uphttpd.c	/^void *client_handler(void *args)$/;"	f
+main	uphttpd.c	/^int main(int argc, char *argv[])$/;"	f
+not_found_response	uphttpd.c	/^const char not_found_response[] = $/;"	v
+ok_response	uphttpd.c	/^const char ok_response[] = $/;"	v
+pmaster	uphttpd.c	/^struct master_info *pmaster = NULL;$/;"	v	typeref:struct:master_info
+send_error	uphttpd.c	/^void send_error(int fd, int which, char *message)  \/\/TODO  可变参函数 ...$/;"	f
+server_destroy	uphttpd.c	/^int server_destroy()$/;"	f
+server_init	uphttpd.c	/^int server_init()$/;"	f
+server_run2	uphttpd.c	/^int server_run2()$/;"	f
+set_nonblock	uphttpd.c	/^void set_nonblock(int fd)$/;"	f
+sig_handler	uphttpd.c	/^void sig_handler(int signo)$/;"	f
+sock_fd	uphttpd.c	/^static int sock_fd = 0;$/;"	v	file:
+sock_listen	uphttpd.c	/^int sock_listen()$/;"	f
+srv_shutdown	uphttpd.c	/^static volatile sig_atomic_t srv_shutdown = 0;$/;"	v	file:
+up_conf	uphttpd.c	/^struct up_cfg_info up_conf = {$/;"	v	typeref:struct:up_cfg_info
+up_sendfile	uphttpd.c	/^int up_sendfile(int fd, char *parameter)$/;"	f
+worker_add	uphttpd.c	/^int worker_add(int conn_fd)$/;"	f
+worker_del	uphttpd.c	/^void worker_del(struct worker_info *pworker)$/;"	f
