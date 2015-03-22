@@ -47,6 +47,7 @@ void *thread_routine (void *arg);
 
 //share resource
 static CThread_pool *pool = NULL;
+
 void
 pool_init (int max_thread_num)
 {

@@ -4,7 +4,7 @@
 !_TAG_PROGRAM_AUTHOR	Darren Hiebert	/dhiebert@users.sourceforge.net/
 !_TAG_PROGRAM_NAME	Exuberant Ctags	//
 DEPS	Makefile	/^DEPS  := .deps$/;"	m
-SRCS	Makefile	/^SRCS := uphttpd.c up_conf.c up_log.c$/;"	m
+SRCS	Makefile	/^SRCS := uphttpd.c up_conf.c up_log.c thread_pool.c$/;"	m
 TGT	Makefile	/^TGT := uphttpd$/;"	m
 !_TAG_PROGRAM_URL	http://ctags.sourceforge.net	/official site/
 __list_add	list.h	/^static inline void __list_add(struct list_head *pnode, $/;"	f
@@ -102,6 +102,7 @@ mylog	up_log.c	/^void mylog(const char* format, ... )$/;"	f
 LOG_BUFFER_SIZE	up_log.h	/^#define LOG_BUFFER_SIZE /;"	d
 cli_fd	uphttpd.c	/^int cli_fd[BACKLOG] = {0};$/;"	v
 client_handler	uphttpd.c	/^void *client_handler(void *args)$/;"	f
+client_handler2	uphttpd.c	/^void *client_handler2(void *args)$/;"	f
 main	uphttpd.c	/^int main(int argc, char *argv[])$/;"	f
 not_found_response	uphttpd.c	/^const char not_found_response[] = $/;"	v
 ok_response	uphttpd.c	/^const char ok_response[] = $/;"	v
@@ -114,6 +115,7 @@ set_nonblock	uphttpd.c	/^void set_nonblock(int fd)$/;"	f
 sig_handler	uphttpd.c	/^void sig_handler(int signo)$/;"	f
 sock_fd	uphttpd.c	/^static int sock_fd = 0;$/;"	v	file:
 sock_listen	uphttpd.c	/^int sock_listen()$/;"	f
+srv_destroy	uphttpd.c	/^int srv_destroy = 0;$/;"	v
 srv_shutdown	uphttpd.c	/^static volatile sig_atomic_t srv_shutdown = 0;$/;"	v	file:
 up_conf	uphttpd.c	/^struct up_cfg_info up_conf = {$/;"	v	typeref:struct:up_cfg_info
 up_sendfile	uphttpd.c	/^int up_sendfile(int fd, char *parameter)$/;"	f

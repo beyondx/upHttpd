@@ -20,13 +20,9 @@ struct up_cfg_info up_conf = {
 };
 
 
-const char ok_response[] = 
-"HTTP/1.1 200 OK\r\n"
-"Server: "PRG_NAME" "VERSION"\r\n"
-"Content-Type: text/html; charset=UTF-8\r\n"
-"\r\n";
 
-const char not_found_response[] = 
+
+static const char not_found_response[] = 
 "HTTP/1.1 404 Not Found\r\n"
 "Content-Type: text/html\r\n"
 "\r\n"
@@ -189,6 +185,15 @@ int up_sendfile(int fd, char *parameter)
   if ( parameter == NULL || strlen(parameter) == 0 )
     parameter = "index.html";
 
+  /*CGI*/
+   if (strnstr(parameter, "cgi-bin/", 8) != NULL) {
+        if (cgi_handler(fd, parameter + 8) < 0) {
+            send_error(fd, 500, "CGI execute error");
+            return -1;
+        }else {
+            return 0;
+        }
+   }
   /* find file-extension */ //TODO CGI  http://192.168.0.254/cgi-bin/shutdown?time=now
   if ( (extension = strstr(parameter, ".")) == NULL ) {
     send_error(fd, 400, "No file extension found");
@@ -314,6 +319,8 @@ void *client_handler2(void *args)
         if (iobuffer.len <= 0) {
             if (iobuffer.len == 0) {
                 DBG_PRINTF("connect closed by peer\n");
+                close(conn_fd);
+                return (void *)NULL;
             } else {
                 if (errno == EAGAIN) {
                     goto read_again;
@@ -334,6 +341,7 @@ void *client_handler2(void *args)
             if (up_sendfile(conn_fd, uri + 1) < 0) {
                 //close(pworker->conn_fd);
                 //worker_del(pworker);
+                close(conn_fd);
                 return (void *)-1;
             }
             close(conn_fd);

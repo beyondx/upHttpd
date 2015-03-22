@@ -1,6 +1,6 @@
 TGT := uphttpd
-SRCS := uphttpd.c up_conf.c up_log.c thread_pool.c
-CFLAGS += -g -D_DEBUG -Wall -I.
+SRCS := uphttpd.c up_conf.c up_log.c thread_pool.c up_cgi.c
+CFLAGS += -g -D_DEBUG -Wall -pthread -ldl -I.
 DEPS  := .deps
 
 

@@ -64,14 +64,14 @@ struct up_cfg_info {
 int up_conf_init(int argc, char *argv[]);
 
 enum { S_INIT, S_IDEL, S_RUNNING, S_DETACH } ; //worker的状态 
-
+//工作线程
 struct worker_info {
 	int status;
 	pthread_t tid;
 	struct list_head list;
 	int  conn_fd;
 };
-
+//主线程
 struct master_info {
 	struct list_head list;
 	pthread_mutex_t mutex;
@@ -100,6 +100,12 @@ struct server_info {
                    "Expires: Mon, 3 Jan 2000 12:34:56 GMT\r\n" \
                    "Connection: close\r\n" 
 
+static const char ok_response[] = 
+"HTTP/1.1 200 OK\r\n"
+"Server: "PRG_NAME" "VERSION"\r\n"
+"Content-Type: text/plain; charset=UTF-8\r\n"
+"\r\n";
+
 static const struct {
   const char *dot_extension;
   const char *mimetype;
@@ -121,3 +127,10 @@ static const struct {
 };
 
 int server_destroy();
+int
+pool_add_worker (void *(*process) (void *arg), void *arg);
+
+void
+pool_init (int max_thread_num);
+int
+pool_destroy ();
