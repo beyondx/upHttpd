@@ -1,0 +1,161 @@
+!_TAG_FILE_FORMAT	2	/extended format; --format=1 will not append ;" to lines/
+!_TAG_FILE_SORTED	1	/0=unsorted, 1=sorted, 2=foldcase/
+!_TAG_PROGRAM_AUTHOR	Darren Hiebert	/dhiebert@users.sourceforge.net/
+!_TAG_PROGRAM_NAME	Exuberant Ctags	//
+!_TAG_PROGRAM_URL	http://ctags.sourceforge.net	/official site/
+!_TAG_PROGRAM_VERSION	5.8	//
+BACKLOG	select_tcp.c	/^#define  BACKLOG	/;"	d	file:
+BACKLOG	src/server.h	/^#define BACKLOG	/;"	d
+BUF_SIZE	server.h	/^#define BUF_SIZE	/;"	d
+BUF_SIZE	src/server.h	/^#define BUF_SIZE	/;"	d
+CThread_pool	src/thread_pool.c	/^} CThread_pool;$/;"	t	typeref:struct:__anon3	file:
+CThread_worker	src/thread_pool.c	/^} CThread_worker;$/;"	t	typeref:struct:worker	file:
+DBG_PRINTF	server.h	/^#define  DBG_PRINTF(/;"	d
+DBG_PRINTF	src/server.h	/^#define  DBG_PRINTF(/;"	d
+DEF_CONF_FILE	server.h	/^#define  DEF_CONF_FILE	/;"	d
+DEF_CONF_FILE	src/server.h	/^#define  DEF_CONF_FILE	/;"	d
+DEF_DOC_ROOT	server.h	/^#define  DEF_DOC_ROOT	/;"	d
+DEF_DOC_ROOT	src/server.h	/^#define  DEF_DOC_ROOT	/;"	d
+DEF_LOG_FILE	server.h	/^#define  DEF_LOG_FILE	/;"	d
+DEF_LOG_FILE	src/server.h	/^#define  DEF_LOG_FILE	/;"	d
+DEF_PORT	server.h	/^#define  DEF_PORT	/;"	d
+DEF_PORT	src/server.h	/^#define  DEF_PORT	/;"	d
+DEPS	src/Makefile	/^DEPS  := .deps$/;"	m
+ERR_PRINTF	server.h	/^#define  ERR_PRINTF(/;"	d
+ERR_PRINTF	src/server.h	/^#define  ERR_PRINTF(/;"	d
+IO_BUF_SIZE	src/server.h	/^#define  IO_BUF_SIZE /;"	d
+LENGTH_OF	src/server.h	/^#define LENGTH_OF(/;"	d
+LISTEN_PORT	select_tcp.c	/^#define  LISTEN_PORT	/;"	d	file:
+LOG_BUFFER_SIZE	src/up_log.h	/^#define LOG_BUFFER_SIZE /;"	d
+MAX	server.h	/^#define  MAX(/;"	d
+MAX	src/server.h	/^#define  MAX(/;"	d
+PATH_SIZE	server.h	/^#define  PATH_SIZE	/;"	d
+PATH_SIZE	src/server.h	/^#define  PATH_SIZE	/;"	d
+PRG_NAME	src/server.h	/^#define PRG_NAME	/;"	d
+SRCS	src/Makefile	/^SRCS := uphttpd.c up_conf.c up_log.c thread_pool.c$/;"	m
+STD_HEADER	src/server.h	/^#define STD_HEADER /;"	d
+S_DETACH	src/server.h	/^enum { S_INIT, S_IDEL, S_RUNNING, S_DETACH } ; \/\/worker的状态 $/;"	e	enum:__anon1
+S_IDEL	src/server.h	/^enum { S_INIT, S_IDEL, S_RUNNING, S_DETACH } ; \/\/worker的状态 $/;"	e	enum:__anon1
+S_INIT	src/server.h	/^enum { S_INIT, S_IDEL, S_RUNNING, S_DETACH } ; \/\/worker的状态 $/;"	e	enum:__anon1
+S_RUNNING	src/server.h	/^enum { S_INIT, S_IDEL, S_RUNNING, S_DETACH } ; \/\/worker的状态 $/;"	e	enum:__anon1
+TGT	src/Makefile	/^TGT := uphttpd$/;"	m
+Ta.hack	www/lib/jiathis.php	/^    Ta.hack=function(){$/;"	j
+VERSION	src/server.h	/^#define VERSION	/;"	d
+XPRINTF	server.h	/^#define   XPRINTF(/;"	d
+XPRINTF	src/server.h	/^#define   XPRINTF(/;"	d
+__list_add	src/list.h	/^static inline void __list_add(struct list_head *pnode, $/;"	f
+a3189color	www/lib/2983189.js	/^var a3189tf="51la";var a3189pu="";var a3189pf="51la";var a3189su=window.location;var a3189sf=document.referrer;var a3189of="";var a3189op="";var a3189ops=1;var a3189ot=1;var a3189d=new Date();var a3189color="";if (navigator.appName=="Netscape"){a3189color=screen.pixelDepth;} else {a3189color=screen.colorDepth;}$/;"	v
+a3189of	www/lib/2983189.js	/^var a3189tf="51la";var a3189pu="";var a3189pf="51la";var a3189su=window.location;var a3189sf=document.referrer;var a3189of="";var a3189op="";var a3189ops=1;var a3189ot=1;var a3189d=new Date();var a3189color="";if (navigator.appName=="Netscape"){a3189color=screen.pixelDepth;} else {a3189color=screen.colorDepth;}$/;"	v
+a3189op	www/lib/2983189.js	/^var a3189tf="51la";var a3189pu="";var a3189pf="51la";var a3189su=window.location;var a3189sf=document.referrer;var a3189of="";var a3189op="";var a3189ops=1;var a3189ot=1;var a3189d=new Date();var a3189color="";if (navigator.appName=="Netscape"){a3189color=screen.pixelDepth;} else {a3189color=screen.colorDepth;}$/;"	v
+a3189ops	www/lib/2983189.js	/^var a3189tf="51la";var a3189pu="";var a3189pf="51la";var a3189su=window.location;var a3189sf=document.referrer;var a3189of="";var a3189op="";var a3189ops=1;var a3189ot=1;var a3189d=new Date();var a3189color="";if (navigator.appName=="Netscape"){a3189color=screen.pixelDepth;} else {a3189color=screen.colorDepth;}$/;"	v
+a3189ot	www/lib/2983189.js	/^var a3189tf="51la";var a3189pu="";var a3189pf="51la";var a3189su=window.location;var a3189sf=document.referrer;var a3189of="";var a3189op="";var a3189ops=1;var a3189ot=1;var a3189d=new Date();var a3189color="";if (navigator.appName=="Netscape"){a3189color=screen.pixelDepth;} else {a3189color=screen.colorDepth;}$/;"	v
+a3189pf	www/lib/2983189.js	/^var a3189tf="51la";var a3189pu="";var a3189pf="51la";var a3189su=window.location;var a3189sf=document.referrer;var a3189of="";var a3189op="";var a3189ops=1;var a3189ot=1;var a3189d=new Date();var a3189color="";if (navigator.appName=="Netscape"){a3189color=screen.pixelDepth;} else {a3189color=screen.colorDepth;}$/;"	v
+a3189pu	www/lib/2983189.js	/^var a3189tf="51la";var a3189pu="";var a3189pf="51la";var a3189su=window.location;var a3189sf=document.referrer;var a3189of="";var a3189op="";var a3189ops=1;var a3189ot=1;var a3189d=new Date();var a3189color="";if (navigator.appName=="Netscape"){a3189color=screen.pixelDepth;} else {a3189color=screen.colorDepth;}$/;"	v
+a3189sf	www/lib/2983189.js	/^var a3189tf="51la";var a3189pu="";var a3189pf="51la";var a3189su=window.location;var a3189sf=document.referrer;var a3189of="";var a3189op="";var a3189ops=1;var a3189ot=1;var a3189d=new Date();var a3189color="";if (navigator.appName=="Netscape"){a3189color=screen.pixelDepth;} else {a3189color=screen.colorDepth;}$/;"	v
+a3189su	www/lib/2983189.js	/^var a3189tf="51la";var a3189pu="";var a3189pf="51la";var a3189su=window.location;var a3189sf=document.referrer;var a3189of="";var a3189op="";var a3189ops=1;var a3189ot=1;var a3189d=new Date();var a3189color="";if (navigator.appName=="Netscape"){a3189color=screen.pixelDepth;} else {a3189color=screen.colorDepth;}$/;"	v
+a3189tf	www/lib/2983189.js	/^var a3189tf="51la";var a3189pu="";var a3189pf="51la";var a3189su=window.location;var a3189sf=document.referrer;var a3189of="";var a3189op="";var a3189ops=1;var a3189ot=1;var a3189d=new Date();var a3189color="";if (navigator.appName=="Netscape"){a3189color=screen.pixelDepth;} else {a3189color=screen.colorDepth;}$/;"	v
+arg	src/thread_pool.c	/^    void *arg;\/*回调函数的参数*\/$/;"	m	struct:worker	file:
+buf	src/server.h	/^	char buf[IO_BUF_SIZE];$/;"	m	struct:iobuffer_t
+cli_fd	select_tcp.c	/^int  cli_fd[BACKLOG];$/;"	v
+cli_fd	src/uphttpd.c	/^int cli_fd[BACKLOG] = {0};$/;"	v
+client_handler	src/uphttpd.c	/^void *client_handler(void *args)$/;"	f
+client_handler2	src/uphttpd.c	/^void *client_handler2(void *args)$/;"	f
+cmd_parse	src/up_conf.c	/^int cmd_parse(int argc, char *argv[])$/;"	f
+cond	src/server.h	/^	pthread_cond_t  cond;$/;"	m	struct:master_info
+conf_file	server.h	/^	char conf_file[PATH_SIZE]; \/\/配置文件路径$/;"	m	struct:up_cfg_info
+conf_file	src/server.h	/^	char conf_file[PATH_SIZE]; \/\/配置文件路径$/;"	m	struct:up_cfg_info
+conn_fd	src/server.h	/^	int  conn_fd;$/;"	m	struct:worker_info
+container_of	src/list.h	/^#define  container_of(/;"	d
+cur_queue_size	src/thread_pool.c	/^    int cur_queue_size;$/;"	m	struct:__anon3	file:
+doc_root_path	server.h	/^	char doc_root_path[PATH_SIZE]; \/\/文档根路径$/;"	m	struct:up_cfg_info
+doc_root_path	src/server.h	/^	char doc_root_path[PATH_SIZE]; \/\/文档根路径$/;"	m	struct:up_cfg_info
+dot_extension	src/server.h	/^  const char *dot_extension;$/;"	m	struct:__anon2
+file_parse	src/up_conf.c	/^static int file_parse(const char *cfg_file)$/;"	f	file:
+hack	www/lib/jiathis.php	/^    Ta.hack=function(){$/;"	j
+iobuffer_t	src/server.h	/^struct iobuffer_t {$/;"	s
+len	src/server.h	/^	int len;$/;"	m	struct:iobuffer_t
+list	src/server.h	/^	struct list_head list;$/;"	m	struct:master_info	typeref:struct:master_info::list_head
+list	src/server.h	/^	struct list_head list;$/;"	m	struct:worker_info	typeref:struct:worker_info::list_head
+list_add	src/list.h	/^static inline void list_add(struct list_head *phead, $/;"	f
+list_add_tail	src/list.h	/^static inline void list_add_tail(struct list_head *phead, $/;"	f
+list_del	src/list.h	/^static inline void list_del(struct list_head *pnode)$/;"	f
+list_del_init	src/list.h	/^static inline void list_del_init(struct list_head *pnode)$/;"	f
+list_entry	src/list.h	/^#define  list_entry(/;"	d
+list_for_each	src/list.h	/^#define   list_for_each(/;"	d
+list_for_each_continue	src/list.h	/^#define   list_for_each_continue(/;"	d
+list_for_each_from	src/list.h	/^#define   list_for_each_from(/;"	d
+list_for_each_safe	src/list.h	/^#define   list_for_each_safe(/;"	d
+list_head	src/list.h	/^struct list_head {$/;"	s
+list_head_init	src/list.h	/^static inline void list_head_init(struct list_head *phead)$/;"	f
+listen_port	server.h	/^	int listen_port; \/\/监听的端口$/;"	m	struct:up_cfg_info
+listen_port	src/server.h	/^	int listen_port; \/\/监听的端口$/;"	m	struct:up_cfg_info
+log_destroy	src/up_log.c	/^int log_destroy()$/;"	f
+log_destroy	www/up_log.c	/^int log_destroy()$/;"	f
+log_file	server.h	/^	char log_file[PATH_SIZE]; \/\/日志文件路径$/;"	m	struct:up_cfg_info
+log_file	src/server.h	/^	char log_file[PATH_SIZE]; \/\/日志文件路径$/;"	m	struct:up_cfg_info
+log_init	src/up_log.c	/^int log_init(const char *logfile)$/;"	f
+log_init	www/up_log.c	/^int log_init(const char *logfile)$/;"	f
+log_pf	src/up_log.c	/^FILE *log_pf = NULL;$/;"	v
+log_pf	www/up_log.c	/^FILE *log_pf = NULL;$/;"	v
+main	select_tcp.c	/^int main()$/;"	f
+main	src/uphttpd.c	/^int main(int argc, char *argv[])$/;"	f
+master_info	src/server.h	/^struct master_info {$/;"	s
+max_thread_num	src/thread_pool.c	/^    int max_thread_num;$/;"	m	struct:__anon3	file:
+mimetype	src/server.h	/^  const char *mimetype;$/;"	m	struct:__anon2
+mimetypes	src/server.h	/^} mimetypes[] = {$/;"	v	typeref:struct:__anon2
+mutex	src/server.h	/^	pthread_mutex_t mutex;$/;"	m	struct:master_info
+mylog	src/up_log.c	/^void mylog(const char* format, ... )$/;"	f
+mylog	www/up_log.c	/^void mylog(const char* format, ... )$/;"	f
+next	src/list.h	/^	struct list_head *next;$/;"	m	struct:list_head	typeref:struct:list_head::list_head
+next	src/thread_pool.c	/^    struct worker *next;$/;"	m	struct:worker	typeref:struct:worker::worker	file:
+not_found_response	src/uphttpd.c	/^const char not_found_response[] = $/;"	v
+offset_of	src/list.h	/^#define  offset_of(/;"	d
+ok_response	src/uphttpd.c	/^const char ok_response[] = $/;"	v
+p	src/server.h	/^	pid_t p;$/;"	m	struct:server_info
+pcfg	src/server.h	/^	struct up_cfg_info *pcfg;$/;"	m	struct:server_info	typeref:struct:server_info::up_cfg_info
+pmaster	src/server.h	/^	struct master_info *pmaster;$/;"	m	struct:server_info	typeref:struct:server_info::master_info
+pmaster	src/uphttpd.c	/^struct master_info *pmaster = NULL;$/;"	v	typeref:struct:master_info
+pool	src/thread_pool.c	/^static CThread_pool *pool = NULL;$/;"	v	file:
+pool_add_worker	src/thread_pool.c	/^pool_add_worker (void *(*process) (void *arg), void *arg)$/;"	f
+pool_destroy	src/thread_pool.c	/^pool_destroy ()$/;"	f
+pool_init	src/thread_pool.c	/^pool_init (int max_thread_num)$/;"	f
+prev	src/list.h	/^	struct list_head *prev;$/;"	m	struct:list_head	typeref:struct:list_head::list_head
+print_conf_info	src/up_conf.c	/^static void print_conf_info(void)$/;"	f	file:
+process	src/thread_pool.c	/^    void *(*process) (void *arg);$/;"	m	struct:worker	file:
+pworker	src/server.h	/^	struct worker_info *pworker;$/;"	m	struct:server_info	typeref:struct:server_info::worker_info
+queue_head	src/thread_pool.c	/^    CThread_worker *queue_head;$/;"	m	struct:__anon3	file:
+queue_lock	src/thread_pool.c	/^    pthread_mutex_t queue_lock;$/;"	m	struct:__anon3	file:
+queue_ready	src/thread_pool.c	/^    pthread_cond_t queue_ready;$/;"	m	struct:__anon3	file:
+run_as_daemon	src/server.h	/^	int run_as_daemon; \/\/是否以守护进程的方式运行$/;"	m	struct:up_cfg_info
+send_error	src/uphttpd.c	/^void send_error(int fd, int which, char *message)  \/\/TODO  可变参函数 ...$/;"	f
+server_destroy	src/uphttpd.c	/^int server_destroy()$/;"	f
+server_info	src/server.h	/^struct server_info {$/;"	s
+server_init	src/uphttpd.c	/^int server_init()$/;"	f
+server_run2	src/uphttpd.c	/^int server_run2()$/;"	f
+set_nonblock	src/uphttpd.c	/^void set_nonblock(int fd)$/;"	f
+shutdown	src/thread_pool.c	/^    int shutdown;$/;"	m	struct:__anon3	file:
+sig_handler	select_tcp.c	/^static void sig_handler(int signo)$/;"	f	file:
+sig_handler	src/uphttpd.c	/^void sig_handler(int signo)$/;"	f
+sock_fd	src/server.h	/^	int sock_fd;$/;"	m	struct:master_info
+sock_fd	src/uphttpd.c	/^static int sock_fd = 0;$/;"	v	file:
+sock_init	select_tcp.c	/^int sock_init()$/;"	f
+sock_listen	src/uphttpd.c	/^int sock_listen()$/;"	f
+srv_destroy	src/uphttpd.c	/^int srv_destroy = 0;$/;"	v
+srv_shutdown	select_tcp.c	/^static volatile sig_atomic_t srv_shutdown = 0;$/;"	v	file:
+srv_shutdown	src/uphttpd.c	/^static volatile sig_atomic_t srv_shutdown = 0;$/;"	v	file:
+status	src/server.h	/^	int status;$/;"	m	struct:worker_info
+thread_routine	src/thread_pool.c	/^thread_routine (void *arg)$/;"	f
+threadid	src/thread_pool.c	/^    pthread_t *threadid;$/;"	m	struct:__anon3	file:
+tid	src/server.h	/^	pthread_t tid;$/;"	m	struct:worker_info
+up_cfg_info	server.h	/^struct up_cfg_info {$/;"	s
+up_cfg_info	src/server.h	/^struct up_cfg_info {$/;"	s
+up_conf	src/uphttpd.c	/^struct up_cfg_info up_conf = {$/;"	v	typeref:struct:up_cfg_info
+up_conf_init	src/up_conf.c	/^int  up_conf_init(int argc, char *argv[])$/;"	f
+up_sendfile	src/uphttpd.c	/^int up_sendfile(int fd, char *parameter)$/;"	f
+usage	src/up_conf.c	/^void usage(const char *prg_name)$/;"	f
+verbose	src/server.h	/^	int verbose; \/\/显式具体执行流程方便调试$/;"	m	struct:up_cfg_info
+worker	src/thread_pool.c	/^typedef struct worker$/;"	s	file:
+worker_add	src/uphttpd.c	/^int worker_add(int conn_fd)$/;"	f
+worker_del	src/uphttpd.c	/^void worker_del(struct worker_info *pworker)$/;"	f
+worker_info	src/server.h	/^struct worker_info {$/;"	s
+worker_nums	src/server.h	/^	size_t worker_nums;  \/\/线程数量$/;"	m	struct:master_info
