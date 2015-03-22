@@ -5,6 +5,7 @@
 
 
 static volatile sig_atomic_t srv_shutdown = 0;
+int srv_destroy = 0;
 static int sock_fd = 0;
 struct master_info *pmaster = NULL;
 
@@ -51,7 +52,7 @@ int sock_listen()
 	}
 
 	//设置socket 非阻塞
-	//set_nonblock(sock_fd);
+	set_nonblock(sock_fd);
 	
 	struct sockaddr_in srv_addr;
 	socklen_t addr_len = sizeof(srv_addr);
@@ -301,6 +302,48 @@ void *client_handler(void *args)
     return (void *)NULL;
 }
 
+void *client_handler2(void *args)
+{
+    DBG_PRINTF("====>client_handler\n");
+    int conn_fd = (int)args;
+
+    struct iobuffer_t iobuffer = {0};
+   // while (!srv_shutdown) {
+    read_again:
+        iobuffer.len = read(conn_fd, iobuffer.buf, IO_BUF_SIZE);
+        if (iobuffer.len <= 0) {
+            if (iobuffer.len == 0) {
+                DBG_PRINTF("connect closed by peer\n");
+            } else {
+                if (errno == EAGAIN) {
+                    goto read_again;
+                }
+                perror("read");
+            }
+            return (void *)-1;
+        }else {
+            DBG_PRINTF("recv:%s[%d]\n", iobuffer.buf, iobuffer.len);
+            char method[PATH_SIZE] = {0};
+            char uri[PATH_SIZE] = {0};
+            char http_ver[PATH_SIZE] = {0};
+            sscanf(iobuffer.buf, "%s %s %s", method, uri, http_ver);
+            DBG_PRINTF("method = %s\n", method);
+            DBG_PRINTF("uri = %s\n", uri);
+            DBG_PRINTF("http_ver = %s\n", http_ver);
+        
+            if (up_sendfile(conn_fd, uri + 1) < 0) {
+                //close(pworker->conn_fd);
+                //worker_del(pworker);
+                return (void *)-1;
+            }
+            close(conn_fd);
+       }
+    //}
+    DBG_PRINTF("<==== %s\n", __FUNCTION__);
+
+    return (void *)NULL;
+}
+
 int worker_add(int conn_fd)
 {
     DBG_PRINTF("====> %s\n", __FUNCTION__);
@@ -361,20 +404,43 @@ int server_run2()
 	pmaster->worker_nums = 0;
 	pmaster->sock_fd = sock_fd;
 
+    fd_set rdfds;
+    struct timeval tv = {0, 0};
+    //线程池
+    pool_init(3);
+
 
 	while (!srv_shutdown) {
-		int conn_fd = accept(sock_fd, (struct sockaddr *)&cli_addr, &addr_len);
-		if (conn_fd == -1) {
-			ERR_PRINTF("accept failed.\n");
-            perror("accept");
-			break;
-		}
-		if (up_conf.verbose){
-			DBG_PRINTF("new connection %s:%hu\n", inet_ntoa(cli_addr.sin_addr), ntohs(cli_addr.sin_port));
-		}
-		worker_add(conn_fd);
-        DBG_PRINTF("worker_nums = %zu\n", pmaster->worker_nums);
-	}	
+        FD_ZERO(&rdfds);
+        FD_SET(sock_fd, &rdfds);
+        //DBG_PRINTF("sock_fd = %d\n", sock_fd);
+        tv.tv_sec = 0;
+        tv.tv_usec = 500000;
+
+        int i = select(sock_fd + 1, &rdfds, NULL, NULL, &tv);
+        
+        if (i == -1) {
+            perror("select");
+            return -1;
+        }else if (i == 0) {
+            continue;
+        }else{
+            if (FD_ISSET(sock_fd, &rdfds)) {    
+        		int conn_fd = accept(sock_fd, (struct sockaddr *)&cli_addr, &addr_len);
+        		if (conn_fd == -1) {
+        			ERR_PRINTF("accept failed.\n");
+                    perror("accept");
+        			break;
+        		}
+        		if (up_conf.verbose){
+        			DBG_PRINTF("new connection %s:%hu\n", inet_ntoa(cli_addr.sin_addr), ntohs(cli_addr.sin_port));
+        		}
+        		//worker_add(conn_fd);
+                pool_add_worker(client_handler2, conn_fd);
+                DBG_PRINTF("worker_nums = %zu\n", pmaster->worker_nums);
+                }
+	   }
+    }	
 
     if (srv_shutdown) {
         server_destroy();
@@ -462,6 +528,8 @@ int server_run()
 /*服务器端的销毁*/
 int server_destroy()
 {
+
+    #if 0
     //链表遍历销毁
     struct list_head *cur, *Next;
     list_for_each_safe(cur, Next, &pmaster->list) {
@@ -477,7 +545,16 @@ int server_destroy()
     DBG_PRINTF("workder_nums = %zu\n", pmaster->worker_nums);
     pthread_mutex_destroy(&pmaster->mutex);
     pthread_cond_destroy(&pmaster->cond);
-    
+    #endif
+
+    if (srv_destroy == 1) {
+        return 0;
+    }
+    srv_destroy = 1;
+
+    /*销毁线程池*/
+    pool_destroy ();
+
     free(pmaster);
 
 	return 0;

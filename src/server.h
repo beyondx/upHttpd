@@ -18,6 +18,7 @@
 #include <ctype.h>
 #include <pthread.h>
 #include <errno.h>
+#include <time.h>
 #include "list.h"
 
 #define BUF_SIZE	1024

@@ -72,6 +72,24 @@ up_cfg_info	server.h	/^struct up_cfg_info {$/;"	s
 verbose	server.h	/^	int verbose; \/\/显式具体执行流程方便调试$/;"	m	struct:up_cfg_info
 worker_info	server.h	/^struct worker_info {$/;"	s
 worker_nums	server.h	/^	size_t worker_nums;  \/\/线程数量$/;"	m	struct:master_info
+CThread_pool	thread_pool.c	/^} CThread_pool;$/;"	t	typeref:struct:__anon3	file:
+CThread_worker	thread_pool.c	/^} CThread_worker;$/;"	t	typeref:struct:worker	file:
+arg	thread_pool.c	/^    void *arg;\/*回调函数的参数*\/$/;"	m	struct:worker	file:
+cur_queue_size	thread_pool.c	/^    int cur_queue_size;$/;"	m	struct:__anon3	file:
+max_thread_num	thread_pool.c	/^    int max_thread_num;$/;"	m	struct:__anon3	file:
+next	thread_pool.c	/^    struct worker *next;$/;"	m	struct:worker	typeref:struct:worker::worker	file:
+pool	thread_pool.c	/^static CThread_pool *pool = NULL;$/;"	v	file:
+pool_add_worker	thread_pool.c	/^pool_add_worker (void *(*process) (void *arg), void *arg)$/;"	f
+pool_destroy	thread_pool.c	/^pool_destroy ()$/;"	f
+pool_init	thread_pool.c	/^pool_init (int max_thread_num)$/;"	f
+process	thread_pool.c	/^    void *(*process) (void *arg);$/;"	m	struct:worker	file:
+queue_head	thread_pool.c	/^    CThread_worker *queue_head;$/;"	m	struct:__anon3	file:
+queue_lock	thread_pool.c	/^    pthread_mutex_t queue_lock;$/;"	m	struct:__anon3	file:
+queue_ready	thread_pool.c	/^    pthread_cond_t queue_ready;$/;"	m	struct:__anon3	file:
+shutdown	thread_pool.c	/^    int shutdown;$/;"	m	struct:__anon3	file:
+thread_routine	thread_pool.c	/^thread_routine (void *arg)$/;"	f
+threadid	thread_pool.c	/^    pthread_t *threadid;$/;"	m	struct:__anon3	file:
+worker	thread_pool.c	/^typedef struct worker$/;"	s	file:
 cmd_parse	up_conf.c	/^int cmd_parse(int argc, char *argv[])$/;"	f
 file_parse	up_conf.c	/^static int file_parse(const char *cfg_file)$/;"	f	file:
 print_conf_info	up_conf.c	/^static void print_conf_info(void)$/;"	f	file:
